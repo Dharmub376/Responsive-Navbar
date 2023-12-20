@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-container {
+    background-image: url('https://images.pexels.com/photos/19498811/pexels-photo-19498811/free-photo-of-black-and-white-photo-of-a-tree-with-no-leaves.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    z-index: 20;
+    align-items: center;
+}
+
+.navbar {
+    position: relative;
+    top: -13cm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+.logo:hover {
+    color: #aaffaa;
+}
+.nav-links {
+    display: flex;
+}
+
+.nav-links a{
+    font-size: larger;
+}
+
+.nav-link {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #aaffaa;
+    text-decoration: underline;
+    transition: 1s;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+.bar:hover {
+    color: #aaffaa;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        padding: 10px;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+}
